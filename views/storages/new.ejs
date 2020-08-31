@@ -1,0 +1,111 @@
+<%- include('../partials/header.ejs') -%>
+
+
+
+<section class="hero is-danger">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Add New Storage
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="column is-one-third"></div>
+<div class="columns"></div>
+<div class="columns"></div>
+
+<form action="/details" method="POST">    
+<div class="columns">
+  <div class="column is-one-third"></div>
+  <div class="column">
+
+    
+    <div class="field">
+      <label class="label">Storage Category :</label>
+      <div class="select is-small is-fullwidth">
+        <select name="category">
+          <option value="shared">Shared Storage</option>
+          <option value="private">Private Storage</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Storage Type :</label>
+      <div class="select is-small is-fullwidth">
+        <select name="storageType">
+          <option value="covered">Covered Storage</option>
+          <option value="uncovered">Uncovered Storage</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label">Storage Usage Type :</label>
+      <div class="select is-small is-fullwidth">
+        <select name="usageType">
+          <option value="all">All Purpose Storage</option>
+          <option value="limited">Limited Storage Storage</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Location (City) :</label>
+      <div class="select is-small is-fullwidth">
+        <select name="location">
+          <option value="Houston">Houston</option>
+          <option value="San Antonio">San Antonio</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Austin">Austin</option>
+          <option value="Forth Worth">Forth Worth</option>
+          <option value="El Paso">El Paso</option>
+          <option value="Arlington">Arlington</option>
+          <option value="Corpus Christi">Corpus Christi</option>
+          <option value="Plano">Plano</option>
+          <option value="Laredo">Laredo</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Google Maps Link</label>
+      <div class="control">
+        <input class="input is-small" type="text" name="mapLink">
+      </div>
+    </div>
+
+    <div class="field">
+    <label class="label">Photo Link</label>
+    <div class="control">
+      <input class="input is-small" type="text" name="photoLink">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Monthly Price</label>
+    <div class="control">
+      <input class="input is-small" type="text" name="price">
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <button class="button is-danger">Add My Storage</button>
+    </div>
+  </div>
+</form>
+
+</div>
+  <div class="column"></div>
+</div>
+
+
+
+
+
+<%- include('../partials/footer.ejs') -%>
+
+

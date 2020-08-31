@@ -9,12 +9,14 @@ a {
 
 .navbar-item.is-mega {
   position: static;
+}
 
   .is-mega-menu-title {
     margin-bottom: 0;
     padding: .375rem 1rem;
-  }
+  
 }
+
 
 span.logo{
   font-size: 36px;
@@ -23,3 +25,9 @@ span.logo{
   font-weight: 600;
 }
 
+
+div.navbar-menu {
+  font-size: 12px;
+  font-weight: 500;
+  }
+ 
