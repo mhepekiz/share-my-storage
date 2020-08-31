@@ -7,11 +7,16 @@ var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
 
+
 require('dotenv').config();
+require('./config/database');
 require('./config/passport');
+
 
 const indexRouter = require('./routes/index');
 const storageRouter = require('./routes/storages');
+
+
 
 var app = express();
 
@@ -41,9 +46,12 @@ app.use(function(req, res, next){
 app.use('/', indexRouter);
 app.use('/storages', storageRouter);
 
+
 app.get('/admin', (req, res) => {
   res.render('index');
 });
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
