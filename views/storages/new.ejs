@@ -2,6 +2,8 @@
 
 
 
+<% if (user) { %>
+
 <section class="hero is-danger">
   <div class="hero-body">
     <div class="container">
@@ -16,12 +18,18 @@
 <div class="columns"></div>
 <div class="columns"></div>
 
-<form action="/details" method="POST">    
+<form action="/storages" method="POST">    
 <div class="columns">
   <div class="column is-one-third"></div>
   <div class="column">
 
-    
+    <div class="field">
+      <label class="label">Publisher</label>
+      <div class="control">
+        <input class="input is-small" type="text" name="publisherName" value="<%= user.name %>" disabled>
+      </div>
+    </div>
+  
     <div class="field">
       <label class="label">Storage Category :</label>
       <div class="select is-small is-fullwidth">
@@ -92,6 +100,22 @@
   </div>
 
   <div class="field">
+    <label class="label">Header</label>
+    <div class="control">
+      <input class="input is-small" type="text" name="storageHeader">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Details</label>
+    <div class="control">
+      <textarea class="textarea" rows="10" name="storageDetails"></textarea>
+    </div>
+  </div>
+
+
+
+  <div class="field">
     <div class="control">
       <button class="button is-danger">Add My Storage</button>
     </div>
@@ -102,7 +126,7 @@
   <div class="column"></div>
 </div>
 
-
+<% } %>
 
 
 

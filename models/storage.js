@@ -18,7 +18,9 @@ const storageSchema = new Schema({
   location: String,
   mapLink: String,
   photoLink: String,
-  price: Number
+  price: Number,
+  storageHeader: String,
+  storageDetails: String
 },
   
   {

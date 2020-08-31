@@ -8,7 +8,6 @@ module.exports = {
   }
   
 function index(req, res) {
-  console.log("Mustafa");
   Storage.find({}, function(err, storages) {
         res.render('storages/index', { title: 'Share My Storage', subtitle: 'Welcome', storages });
     });
@@ -21,7 +20,7 @@ function index(req, res) {
   function create(req, res) {
     const storage = new Storage(req.body);
     storage.save(function(err) {
-      if (err) return res.render('storages/new');
+      if (err) return res.render('storages/new', { title: 'Share My Storage', subtitle: 'Adding Storage Failed!'});
       res.redirect('/storages');
     })
   }

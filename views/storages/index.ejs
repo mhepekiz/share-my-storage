@@ -1,6 +1,65 @@
 <%- include('../partials/header'); -%>
 
 
-Hello
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <img src="https://i.imgur.com/6rTFrIq.png" width="1200" height="auto">
+        <h2 class="subtitle">
+          Make Money With Your Free Storage Space Today!
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+<section>
+<div class="container is-fullscreen">
+    <div class="columns features">
+<% storages.forEach(function(st) {  %>
+ 
+   
+        
+          <div class="column is-2">
+            <div class="card is-shady">
+              <div class="card-image">
+                <figure class="image is-3by2">
+                  <img src="<%= st.photoLink %>" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <h4><%= st.storageHeader %></h4>
+                  <p><b><%= st.location %></b></p>
+                  <span class="button is-link is-danger">Show Details</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+  
+<% }); %>
+<div class="column is-5">
+    <div class="container is-widescreen">
+    <section class="hero is-danger is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Add Your Space For Free
+            </h1>
+            <h2 class="subtitle">
+              Share My Storage is a General Assembly Software Engineering Immersive Student Project!
+            </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>
+
+</div>
+
+</div>
+</section>
 
 <%- include('../partials/footer'); -%>

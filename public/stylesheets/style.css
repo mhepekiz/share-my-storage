@@ -31,3 +31,25 @@ div.navbar-menu {
   font-weight: 500;
   }
  
+
+  .tile.is-child.card {
+    .card-footer {
+        margin-top: auto;
+   }
+   display: flex;
+   flex-direction: column;
+} 
+
+
+.hero
+  &.has-background
+    position: relative
+    overflow: hidden
+  &-background
+    position: absolute
+    object-fit: cover
+    object-position: center center
+    width: 100%
+    height: 100%
+    &.is-transparent
+      opacity: 0.3
