@@ -1,0 +1,119 @@
+<%- include('../partials/header.ejs') -%>
+
+
+<%
+
+
+function ucFirst(string) 
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+%>
+<div class="container is-fluid">
+    
+    <section class="section">
+      <div class="container">
+        <div class="columns is-desktop">
+          <div class="column is-6-desktop"><img src="<%= storage.photoLink %>" alt=""> </div>
+          <div class="column is-6-desktop">
+           <h2 class="title is-spaced"><label class="pricelabel">$<%= storage.price %> / Month</label><br><%= storage.storageHeader %></h2>
+            <p class="subtitle"><%= storage.storageDetails %></p>
+            <div class="columns">
+              <div class="column is-half">
+                <div class="field is-horizontal">
+                 <div class="field-body">
+                   <div class="field">
+                      <div class="control">
+
+                        <% if (!user) { %> <button class="bd-tw-button button is-focused"><a href="/auth/google">Sign Up or Login To Send Message</a>
+                            <% } else { %>
+                            <button class="button is-danger">Contact With Owner</button> <% } %>
+                      </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns">
+                <div class="column is-6">
+                    
+                    <div class="table-container">
+                        <table class="table is-fullwidth">
+                            <table class="table is-fullwidth">
+                                <thead>
+                                  <tr>
+                                    <th colspan="2">Details</th>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Category</td>
+                                    <td><%= ucFirst(storage.category) %></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Google Maps Link</td>
+                                    <td><a href="<%=storage.mapLink%>" target="_blank"><%= storage.mapLink %></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>City</td>
+                                    <td><%= storage.location %></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Storage Type</td>
+                                    <td><%= ucFirst(storage.storageType) %></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Usage Type</td>
+                                    <td><%= ucFirst(storage.usageType) %></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </table>
+                      </div>
+            
+                      
+
+                </div>
+                <div class="column is-6"> <div class="table-container">
+                    <table class="table is-fullwidth">
+                        <table class="table is-fullwidth is-striped">
+                            <thead>
+                              <tr>
+                                <th>Comments</th>
+                                <th align="right">Rating : 3.5/5</th>
+                             </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td colspan="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis at sapien a ullamcorper.<br><b>Michael S.</b> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis at sapien a ullamcorper.<br><b>Chris O.</b> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis at sapien a ullamcorper.<br><b>Futsum  N.</b> </td>
+                            </tr>
+                          </tbody>
+                          </table>
+                    </table></div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+    
+  </div>
+
+<%- include('../partials/footer.ejs') -%>
+
+

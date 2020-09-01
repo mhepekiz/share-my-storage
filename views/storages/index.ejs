@@ -17,9 +17,12 @@
 <section>
 <div class="container is-fullscreen">
     <div class="columns features">
-<% storages.forEach(function(st) {  %>
+<% storages.slice(0, 3).forEach(function(st) {  
+    
+       
+            
+            %>
  
-   
         
           <div class="column is-2">
             <div class="card is-shady">
@@ -30,16 +33,16 @@
               </div>
               <div class="card-content">
                 <div class="content">
-                  <h4><%= st.storageHeader %></h4>
-                  <p><b><%= st.location %></b></p>
-                  <span class="button is-link is-danger">Show Details</span>
+                  <h5><%= st.storageHeader %></h5>
+                  <p><b><a href="#"><%= st.location %></a></b></p>
+                  <a href="/storages/<%= st._id %>"><span class="button is-link is-danger is-focused">Show Details</span></a>
                 </div>
               </div>
             </div>
           </div>
         
   
-<% }); %>
+<%     }); %>
 <div class="column is-5">
     <div class="container is-widescreen">
     <section class="hero is-danger is-medium">

@@ -39,6 +39,11 @@
                 CONTACT
                 </a>
             </div>
+            <% if( user ) { %>
+            <div class = "navbar-brand">
+             <div class="welcome">| &nbsp;Welcome, <b><%= user.name %></b></div>
+          </div>
+        <% } %>
 
          
           </div>
@@ -47,7 +52,7 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                    <% if (!user) { %><a class="bd-tw-button button" href="/auth/google">
+                    <% if (!user) { %><a class="bd-tw-button button is-focused is-small" href="/auth/google">
                     <span>Connect with Google</span> <% } %>
                   </a>
       
@@ -55,14 +60,16 @@
 
 
                 <p class="control">
-                  <a class="button is-info" href="/storages/new">Add Storage</a>
+                  <a class="button is-info is-focused is-small" href="/storages/new">Add Storage</a>
                     <% if (user) { %>
-                  <a class="button is-primary" href="/logout">
+                  <a class="button is-focused is-small" href="/logout">
+                      <span>No New Messages</span></a>        
+                  <a class="button is-primary is-focused is-small" href="/logout">
                     <span>Edit My Account</span></a>    
-                  <a class="button is-warning" href="/logout">
+                  <a class="button is-warning is-focused is-small" href="/logout">
                     <span>Logout</span></a>
                     <% } else { %>
-                        <a class="button is-danger" href="/auth/google">
+                        <a class="button is-danger is-focused is-small" href="/auth/google">
                     <span>Sign Up</span></a>
                     <% } %>
                   
@@ -73,6 +80,5 @@
           </div>
         </div>
       </nav>
-     
 
 

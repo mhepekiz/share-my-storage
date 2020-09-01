@@ -20,7 +20,7 @@ const storageSchema = new Schema({
   photoLink: String,
   price: Number,
   storageHeader: String,
-  storageDetails: String
+  storageDetails: String,
 },
   
   {
