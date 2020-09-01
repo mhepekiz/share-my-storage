@@ -15,7 +15,7 @@ require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const storageRouter = require('./routes/storages');
-
+const userRouter = require('./routes/users');
 
 
 var app = express();
@@ -45,7 +45,7 @@ app.use(function(req, res, next){
 
 app.use('/', indexRouter);
 app.use('/storages', storageRouter);
-
+app.use('/users', userRouter);
 
 app.get('/admin', (req, res) => {
   res.render('index');

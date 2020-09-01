@@ -21,6 +21,7 @@ const storageSchema = new Schema({
   price: Number,
   storageHeader: String,
   storageDetails: String,
+  userID: String
 },
   
   {

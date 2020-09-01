@@ -1,6 +1,16 @@
 <%- include('../partials/header'); -%>
 
+<% if( (user) && (!user.phone)) { %>
 
+
+    <div class="notification is-warning" style="border-radius: 0; margin-bottom: 0;">
+        <p align="center">
+            You have to complete your Phone Number and Address information before start to use! Click here to add your details!
+
+        </p>
+      </div>
+
+<% } %>
 
 <section class="hero">
     <div class="hero-body">
@@ -28,14 +38,15 @@
             <div class="card is-shady">
               <div class="card-image">
                 <figure class="image is-3by2">
-                  <img src="<%= st.photoLink %>" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+                    <a href="/storages/<%= st._id %>"><img src="<%= st.photoLink %>" alt="Placeholder image" class="modal-button" data-target="modal-image2"></a>
                 </figure>
               </div>
               <div class="card-content">
                 <div class="content">
                   <h5><%= st.storageHeader %></h5>
-                  <p><b><a href="#"><%= st.location %></a></b></p>
-                  <a href="/storages/<%= st._id %>"><span class="button is-link is-danger is-focused">Show Details</span></a>
+                  <p><b><a href="/storages/showbycity"><%= st.location %></a></b></p>
+                  <a href="/storages/<%= st._id %>"><span class="button is-link is-danger is-focused">Show Details  &nbsp;&nbsp;
+                    <% if( (user) && (user._id == st.userID) ){  %><i class="fas fa-star"></i> <% } %></span></a>
                 </div>
               </div>
             </div>

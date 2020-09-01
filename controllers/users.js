@@ -1,26 +1,25 @@
-const Student = require('../models/user');
+const User = require('../models/user');
 
 
 module.exports = {
-    index
+    edit,
+    update
   };
 
-
-
-
-function index(req, res, next) {
-    console.log(req.query)
-    // Make the query object to use with Student.find based up
-    // the user has submitted the search form or now
-    let modelQuery = req.query.name ? {name: new RegExp(req.query.name, 'i')} : {};
-    // Default to sorting by name
-    let sortKey = req.query.sort || 'name';
-    Student.find(modelQuery)
-    .sort(sortKey).exec(function(err, students) {
-      if (err) return next(err);
-      // Passing search values, name & sortKey, for use in the EJS
-      res.render('students/index', { students, name: req.query.name, sortKey });
+  function edit(req, res) {
+    User.findById (req.params.id,function(err, user) {
+      res.render('users/', { title: 'Share My Storage', subtitle: 'Edit User Details',  user });
     });
   }
+
+  function update(req, res) {
+    User.findByIdAndUpdate(req.params.id, req.body, function(err, user) {
+      if (err) {
+            res.render('users/', { title: 'Share My Storage', subtitle: 'Edit User Details',  user });
+        }
+        res.redirect(`/users/${user.id}`)
+    })
+}
+
 
   

@@ -20,15 +20,34 @@ function ucFirst(string)
            <h2 class="title is-spaced"><label class="pricelabel">$<%= storage.price %> / Month</label><br><%= storage.storageHeader %></h2>
             <p class="subtitle"><%= storage.storageDetails %></p>
             <div class="columns">
-              <div class="column is-half">
+              <div class="column is-fullwidth">
                 <div class="field is-horizontal">
                  <div class="field-body">
                    <div class="field">
-                      <div class="control">
+                      <div class="container">
+                        <div class="table-container">
+                            
+                            <table class="table" style="background-color:#efefef;">
+                              <tr><td><% if (!user) { %> <button class="bd-tw-button button is-focused"><a href="/auth/google">Sign Up or Login To Send Message</a>
+                                <% } else if( user ) { %>
+                                <button class="button is-success">Contact With Owner</button></td> <% } %>
+                                
+                                <td> <% if( (user) && (user._id == storage.userID) ){  %> <a href="/storages/<%= storage._id %>/edit"><button class="button is-success">Edit Storage</button> </a> <%  } %>
+                                 </td>
+    
+                                  <td>
+                                    <% if( (user) && (user._id == storage.userID) ){  %>  <form action="/storages/<%= storage._id %>?_method=DELETE" method="POST">
+                                <button class="button is-danger">Delete Storage</button> </form><%  } %>
+                            </td></tr>
+                            </table>
+                        
+                        
+                          
+                        
+                                 
+                              
 
-                        <% if (!user) { %> <button class="bd-tw-button button is-focused"><a href="/auth/google">Sign Up or Login To Send Message</a>
-                            <% } else { %>
-                            <button class="button is-danger">Contact With Owner</button> <% } %>
+                                </div>
                       </div>
                     </div>
                 </div>
