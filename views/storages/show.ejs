@@ -30,9 +30,9 @@ function ucFirst(string)
                             <table class="table" style="background-color:#efefef;">
                               <tr><td><% if (!user) { %> <button class="bd-tw-button button is-focused"><a href="/auth/google">Sign Up or Login To Send Message</a>
                                 <% } else if( user ) { %>
-                                <button class="button is-success">Contact With Owner</button></td> <% } %>
+                                    <a href="/forms/<%= storage._id %>"><button class="button is-success">Contact With Owner</button></a></td> <% } %>
                                 
-                                <td> <% if( (user) && (user._id == storage.userID) ){  %> <a href="/storages/<%= storage._id %>/edit"><button class="button is-success">Edit Storage</button> </a> <%  } %>
+                                <td> <% if( (user) && (user._id == storage.userID) ){  %> <a href="/storages/<%= storage._id %>/edit"><button class="button is-info">Edit Storage</button> </a> <%  } %>
                                  </td>
     
                                   <td>

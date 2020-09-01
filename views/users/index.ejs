@@ -40,7 +40,7 @@
             <div class="field">
             <label class="label">Mobile Phone Number</label>
             <div class="control">
-              <input class="input is-small" type="text" name="phone" >
+              <input class="input is-small" type="text" name="phone" value="<%= user.phone %>">
             </div>
           </div>
         
@@ -48,6 +48,7 @@
             <label class="label">Location (City) :</label>
             <div class="select is-small is-fullwidth">
               <select name="location">
+                <option selected value="<%= user.location %>"><%= user.location %></option>
                 <option value="Houston">Houston</option>
                 <option value="San Antonio">San Antonio</option>
                 <option value="Dallas">Dallas</option>
@@ -65,7 +66,7 @@
           <div class="field">
             <label class="label">Address</label>
             <div class="control">
-              <input class="input is-small" type="text" name="address" >
+              <input class="input is-small" type="text" name="address" value="<%= user.address %>">
             </div>
           </div>
         

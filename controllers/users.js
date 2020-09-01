@@ -17,7 +17,6 @@ module.exports = {
         if (err) {
             res.render('users', { title: 'Share My Storage', subtitle: 'Edit User Details',  user });
         }
-        console.log("++++++++++++Checkpoint");
         res.redirect('/storages/');
     })
 }

@@ -62,7 +62,7 @@
                 <% if (user) { %> <p class="control">
                  <a href="/users/<%= user._id %>/edit"><button class="button is-primary is-focused is-small">Edit My Account</button> </a> 
                   &nbsp;
-                  <a class="button is-focused is-small" href="#"><span>No New Messages</span></a> &nbsp;
+                   <a class="button is-focused is-small" href="/inbox"><span>Message Inbox</span></a> &nbsp;
                 <% if(user.phone) { %><a class="button is-info is-focused is-small" href="/storages/new"> <% } else { %><a class="button is-info is-focused is-small" disabled href="#"> <% } %> Add Storage</a> &nbsp;
                      <a class="button is-warning is-focused is-small" href="/logout">
                     <span>Logout</span></a> &nbsp;
@@ -78,5 +78,4 @@
           </div>
         </div>
       </nav>
-
 

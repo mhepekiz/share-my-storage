@@ -1,5 +1,8 @@
 const User = require('../models/user');
 const Storage = require('../models/storage');
+const Contact = require('../models/contact');
+
+
 
 module.exports = {
   index,
@@ -55,21 +58,6 @@ function deleteStorage(req, res) {
       res.redirect(`/storages`);
   });
 }
-
-
-  // function updateStorage(req, res) {
-  //   const storage = new Storage(req.body);
-  //   storage.updateOne(function(err) {
-  //     if (err) return res.render('storages/error', { title: 'Share My Storage', subtitle: 'Adding Storage Failed!'});
-  //     console.log("1 document updated");
-  //      res.redirect('/storages');
-  //   })
-  // }
-
-
-
-
-
 
 
 
