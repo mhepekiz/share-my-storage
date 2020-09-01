@@ -6,6 +6,7 @@ const userSchema = new Schema({
     phone: String,
     email: String,
     location: String,
+    address: String,
     userrole: {
         type: String,
         Enum: ['user', 'admin']

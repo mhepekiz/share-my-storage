@@ -14,12 +14,11 @@ module.exports = {
 
   function update(req, res) {
     User.findByIdAndUpdate(req.params.id, req.body, function(err, user) {
-      if (err) {
-            res.render('users/', { title: 'Share My Storage', subtitle: 'Edit User Details',  user });
+        if (err) {
+            res.render('users', { title: 'Share My Storage', subtitle: 'Edit User Details',  user });
         }
-        res.redirect(`/users/${user.id}`)
+        console.log("++++++++++++Checkpoint");
+        res.redirect('/storages/');
     })
 }
-
-
   
