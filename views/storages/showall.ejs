@@ -1,0 +1,58 @@
+<%- include('../partials/header'); -%>
+
+
+
+<section>
+    <div class="container is-fullscreen is-fullheight">
+        <div class="container"><a href="/storages/all/showall">SHOW ALL STORAGES</a><br><br></div>
+        <div class="columns features">
+    
+        <div class="table-container">
+             <table class="table">
+                <tr>
+                    <% let count = 0;
+                       storages.forEach(function(st) {  
+                       %>
+                    <td>
+                        <div class="card is-shady">
+                  <div class="card-image">
+                    <figure class="image is-3by2">
+                        <a href="/storages/<%= st._id %>"><img src="<%= st.photoLink %>" alt="Placeholder image" class="modal-button" data-target="modal-image2"></a>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="content">
+                      <h5><%= st.storageHeader %></h5>
+                      <p><b><a href="/storages/<%= st.location %>/showbycity"><%= st.location %></a></b></p>
+                      <a href="/storages/<%= st._id %>"><span class="button is-link is-danger is-focused">Show Details  &nbsp;
+                        <% if( (user) && (user._id == st.userID) ){  %><i class="fas fa-star"></i> <% } %></span></a>
+                    </div>
+                  </div>
+                </div>     
+                    </td>
+              
+              <% if(count == 4){  count = 0; %>
+
+                </tr><tr>
+
+              <% } else { count = count+1; } %>
+
+              
+                  <%     }); %>
+                  </tr>
+             </table>
+            </div>
+
+
+
+
+      
+   
+    
+    </div>
+    
+    </div>
+    </section>
+
+
+<%- include('../partials/footer'); -%>

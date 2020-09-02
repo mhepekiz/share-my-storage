@@ -1,15 +1,6 @@
 <%- include('../partials/header.ejs') -%>
 
 
-<%
-
-
-function ucFirst(string) 
-{
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-%>
 <div class="container is-fluid">
     
     <section class="section">
@@ -40,14 +31,7 @@ function ucFirst(string)
                                 <button class="button is-danger">Delete Storage</button> </form><%  } %>
                             </td></tr>
                             </table>
-                        
-                        
-                          
-                        
-                                 
-                              
-
-                                </div>
+                         </div>
                       </div>
                     </div>
                 </div>
@@ -76,7 +60,7 @@ function ucFirst(string)
                                 <tbody>
                                   <tr>
                                     <td>Category</td>
-                                    <td><%= ucFirst(storage.category) %></td>
+                                    <td><%=storage.category%></td>
                                   </tr>
                                   <tr>
                                     <td>Google Maps Link</td>
@@ -88,11 +72,11 @@ function ucFirst(string)
                                   </tr>
                                   <tr>
                                     <td>Storage Type</td>
-                                    <td><%= ucFirst(storage.storageType) %></td>
+                                    <td><%=storage.storageType%></td>
                                   </tr>
                                   <tr>
                                     <td>Usage Type</td>
-                                    <td><%= ucFirst(storage.usageType) %></td>
+                                    <td><%=storage.usageType%></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -105,15 +89,8 @@ function ucFirst(string)
                 <div class="column is-6"> <div class="table-container">
                     <table class="table is-fullwidth">
                         <table class="table is-fullwidth is-striped">
-                            <thead>
-                              <tr>
-                                <th>Reviews</th>
-                                <th align="right">Rating : 3.5/5</th>
-                             </tr>
-                            </thead>
 
                             <tbody><tr><td>
-
 
                               <% if (storage.reviews.length) { %>
                                 <table>
@@ -127,8 +104,7 @@ function ucFirst(string)
                                       </tr>
                                     <% }); %>
                                     <tr>
-                                      <td></td>
-                                      <td><strong><%= (total / storage.reviews.length).toFixed(1) %></strong></td>
+                                      <td colspan="2" align="right" >Rating : <strong><%= (total / storage.reviews.length).toFixed(1) %></strong></td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -139,6 +115,9 @@ function ucFirst(string)
 
 
                             </td></tr></tbody>
+
+                            <% if(user){ %>
+
                             <tbody>
                               <tr>
                                 <td colspan="2">
@@ -162,16 +141,12 @@ function ucFirst(string)
                                   </form>
                                 </td>
                                 </tr>
-                           </tbody>
+                           </tbody> 
+                          <% } %>
                           </table>
                     </table></div>
-              </div>
-          </div>
-        </div>
-      </section>
-
+           
     </section>
-    
   </div>
 
 <%- include('../partials/footer.ejs') -%>

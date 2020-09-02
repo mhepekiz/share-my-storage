@@ -25,7 +25,7 @@
 
 
 <section>
-<div class="container is-fullscreen">
+<div class="container is-fullscreen is-fullheight">
     <div class="columns features">
 <% storages.slice(0, 3).forEach(function(st) {  
     
@@ -44,7 +44,7 @@
               <div class="card-content">
                 <div class="content">
                   <h5><%= st.storageHeader %></h5>
-                  <p><b><a href="/storages/showbycity"><%= st.location %></a></b></p>
+                  <p><b><a href="/storages/<%= st.location %>/showbycity"><%= st.location %></a></b></p>
                   <a href="/storages/<%= st._id %>"><span class="button is-link is-danger is-focused">Show Details  &nbsp;
                     <% if( (user) && (user._id == st.userID) ){  %><i class="fas fa-star"></i> <% } %></span></a>
                 </div>
@@ -54,6 +54,7 @@
         
   
 <%     }); %>
+
 <div class="column is-5">
     <div class="container is-widescreen">
     <section class="hero is-danger is-medium">
@@ -71,7 +72,7 @@
 
 </div>
 
-</div>
+</div><div class="container"><a href="storages/all/showall">SHOW ALL STORAGES</a></div>
 </section>
 
 <%- include('../partials/footer'); -%>

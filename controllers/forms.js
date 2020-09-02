@@ -1,10 +1,12 @@
 let User = require('../models/user');
 let Storage = require('../models/storage');
 let Contact = require('../models/contact');
+const user = require('../models/user');
 
 module.exports = {
     contact,
-    sendMessage
+    sendMessage,
+    getInbox
     }
     
     function contact(req, res) {
@@ -20,3 +22,9 @@ module.exports = {
         res.redirect('/storages');
       })
     }
+
+    function getInbox(req, res) {
+      Contact.find({ "ownerID": '5f487e5384295f30d89d6173' }, function(err, messages) {
+            res.render('forms/inbox', { title: 'Share My Storage', subtitle: 'Welcome', messages });
+        });
+      }

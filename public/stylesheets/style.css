@@ -2,7 +2,7 @@ body {
   padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #efefef;
-  height: 100vh;
+  height: 100%;
 
 }
 
@@ -10,15 +10,7 @@ a {
   color: #00B7FF;
 }
 
-.navbar-item.is-mega {
-  position: static;
-}
 
-  .is-mega-menu-title {
-    margin-bottom: 0;
-    padding: .375rem 1rem;
-  
-}
 
 
 span.logo{
@@ -34,14 +26,6 @@ div.navbar-menu {
   font-weight: 500;
   }
  
-
-  .tile.is-child.card {
-    .card-footer {
-        margin-top: auto;
-   }
-   display: flex;
-   flex-direction: column;
-} 
 
 
 div.welcome {

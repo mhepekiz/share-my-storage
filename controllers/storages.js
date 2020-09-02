@@ -11,7 +11,9 @@ module.exports = {
   create,
   edit,
   update,
-  deleteStorage
+  deleteStorage,
+  listAll,
+  listByCity
   }
   
 function index(req, res) {
@@ -19,6 +21,21 @@ function index(req, res) {
         res.render('storages/index', { title: 'Share My Storage', subtitle: 'Welcome', storages });
     });
   }
+
+  function listAll(req, res) {
+    Storage.find({}, function(err, storages) {
+          res.render('storages/showall', { title: 'Share My Storage', subtitle: 'Show All Storages', storages });
+      }).sort( { timestamp: 1 } );
+    }
+
+
+    function listByCity(req, res) {
+      Storage.find({ "location": req.params.location }, function(err, storages) {
+        console.log(req);
+            res.render('storages/showall', { title: 'Share My Storage', subtitle: 'Show All Storages', storages });
+        });
+      }
+
 
   function show(req, res) {
     Storage.findById (req.params.id,function(err, storage) {
@@ -58,6 +75,4 @@ function deleteStorage(req, res) {
       res.redirect(`/storages`);
   });
 }
-
-
 

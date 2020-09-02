@@ -8,7 +8,8 @@ router.post('/', storagesCtrl.create);
 router.delete('/:id', storagesCtrl.deleteStorage);
 router.get('/:id', storagesCtrl.show);
 router.get('/:id/edit', storagesCtrl.edit);
-router.put('/:id', storagesCtrl.update)
-
+router.put('/:id', storagesCtrl.update);
+router.get('/:id/showall', storagesCtrl.listAll);
+router.get('/:location/showbycity', storagesCtrl.listByCity);
 
 module.exports = router;

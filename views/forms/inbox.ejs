@@ -1,0 +1,40 @@
+<%- include('../partials/header'); -%>
+
+<section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Inbox
+        </h1>
+        <h2 class="subtitle">
+          
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="table-container">
+    <table class="table is-fullwidth">
+        <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Message</th>
+             </tr>
+            </thead>
+            <tbody>
+            <% messages.forEach(function(msg) {  %>
+              <tr>
+                <td><%= msg.contactMessage %></td>
+                <td><%= msg.storageHeader %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+    </table>
+  </div>
+
+  
+<%- include('../partials/footer'); -%>
+
