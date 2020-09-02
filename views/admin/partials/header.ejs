@@ -3,6 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %>  | <%= subtitle %></title>
+    <title>ShareMyStorage | Admin Panel</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+
+         
+            <nav class="navbar ">
+                <div class="navbar-brand">
+                  <a class="navbar-item" href="/">
+                <span class="logo">SHARE<font color="#777777">MY</font>STORAGE</span></a>
+                 </div>
+              
+                <div id="navMenubd-example" class="navbar-menu">
+                    <div class = "navbar-brand">
+                        <span class = "navbar-item">
+                        <b>ADMIN PANEL</b> 
+                        </span>
+                    </div>
+                  
+                    <% if((user) && (user.userrole == "admin")){ %>
+                  
+                    <div class = "navbar-brand">
+                        <a class = "navbar-item" href="/admin/storages">
+                        STORAGES LIST
+                        </a>
+                    </div>
+                    <div class = "navbar-brand">
+                        <a class = "navbar-item" href="/admin/users">
+                        USERS LIST
+                        </a>
+                    </div>
+                    
+                <% } %>
+        
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                          <p class="control">
+                            <% if((!user) || (user.userrole != "admin")){ %><a class="bd-tw-button button is-focused is-small" href="/auth/google">
+                              <span>Connect with Google</span> <% } %>
+                            </a>
+                
+                          </p>
+          
+          
+                         </div>
+                      </div>
+
+                  </div>
+              
+                
+                   
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+
+     
+

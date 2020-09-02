@@ -1,30 +1,89 @@
 <%- include('./partials/header'); -%>
 
-<h1>Admin Routing</h1>
-
-
-<div class="row justify-content-md-center" style="margin-top: 100px">
-    <div class="col-md-6">
-
-        {{#if message}}
-            <div class="alert {{messageClass}}" role="alert">
-                {{message}}
-            </div>
-        {{/if}}
-
-        <form method="POST" action="/login">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+<section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          All Storages
+        </h1>
+        <h2 class="subtitle">
+          <%= user.name %>, you can manage storages here
+        </h2>
+      </div>
     </div>
-</div>
+  </section>
 
+
+  <div class="table-container">
+    <table class="table is-fullwidth">
+        <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Storage Type</th>
+                <th>Usage Type</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Delete</th>
+               </tr>
+            </thead>
+            <tbody>
+            <% storages.forEach(function(st) {  %>
+              <tr>
+                <td><%= st.storageHeader %></td>
+                <td><%= st.location %></td>
+                <td><%= st.category %></td>
+                <td><%= st.storageType %></td>
+                <td><%= st.usageType %></td>
+                <td><%= st.price %></td>
+                <td><a href="/flights/<%= st._id %>"><button class="detailButton">DEACTIVATE</button></a></td>
+                <td><a href="/flights/<%= st._id %>"><button class="detailButton">DELETE</button></a></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+    </table>
+  </div>
+
+
+
+
+  <div class="table-container">
+    <table class="table is-fullwidth">
+        <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Storage Type</th>
+                <th>Usage Type</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Delete</th>
+               </tr>
+            </thead>
+            <tbody>
+            <% users.forEach(function(us) {  %>
+              <tr>
+                <td><%= us.name %></td>
+                <td><%= us.email %></td>
+                <td><%= us.location %></td>
+                <td><%= us.phone %></td>
+                <td><%= us.role %></td>
+                <td><%= us.googleId %></td>
+                <td><a href="/flights/<%= us._id %>"><button class="detailButton">DEACTIVATE</button></a></td>
+                <td><a href="/flights/<%= us._id %>"><button class="detailButton">DELETE</button></a></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+    </table>
+  </div>
+
+
+  
 <%- include('./partials/footer'); -%>
 

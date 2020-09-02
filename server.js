@@ -17,6 +17,7 @@ const indexRouter = require('./routes/index');
 const storageRouter = require('./routes/storages');
 const userRouter = require('./routes/users');
 const contactRouter = require('./routes/forms');
+const adminRouter = require('./routes/admins');
 
 
 var app = express();
@@ -48,11 +49,7 @@ app.use('/', indexRouter);
 app.use('/storages', storageRouter);
 app.use('/users', userRouter);
 app.use('/forms', contactRouter);
-
-app.get('/admin', (req, res) => {
-  res.render('index');
-});
-
+app.use('/admins', adminRouter);
 
 
 // catch 404 and forward to error handler

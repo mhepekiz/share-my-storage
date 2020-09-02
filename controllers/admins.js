@@ -1,29 +1,19 @@
-// This will hold the users and authToken related to users
-const authTokens = {};
+let User = require('../models/user');
+let Storage = require('../models/storage');
+let Contact = require('../models/contact');
 
-app.post('/login', (req, res) => {
-    const { email, password } = req.body;
-    const hashedPassword = getHashedPassword(password);
 
-    const user = users.find(u => {
-        return u.email === email && hashedPassword === u.password
-    });
 
-    if (user) {
-        const authToken = generateAuthToken();
+module.exports = {
+  index
+}
+  
 
-        // Store authentication token
-        authTokens[authToken] = user;
+function index(req, res) {
+    Storage.find({}, function(err, storages) {
+        User.find({}, function(err, users) {
 
-        // Setting the auth token in cookies
-        res.cookie('AuthToken', authToken);
-
-        // Redirect user to the protected page
-        res.redirect('/protected');
-    } else {
-        res.render('login', {
-            message: 'Invalid username or password',
-            messageClass: 'alert-danger'
-        });
+        res.render('./admin/index', { title: 'Share My Storage Admin', subtitle: 'All Storages', storages, users });
+      }).sort( { timestamp: 1 } );
+    }).sort( { name: 1 } );
     }
-});

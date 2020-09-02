@@ -52,6 +52,13 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
+                  <% if((user) && (user.userrole == "admin")){ %><a class="bd-tw-button button is-focused is-small is-warning" href="/admins">
+                  <span>Admin Panel</span> <% } %>
+                </a>
+    
+              </p>
+
+                <p class="control">
                     <% if (!user) { %><a class="bd-tw-button button is-focused is-small" href="/auth/google">
                     <span>Connect with Google</span> <% } %>
                   </a>

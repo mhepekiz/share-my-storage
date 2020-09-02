@@ -1,6 +1,6 @@
-const User = require('../models/user');
-const Storage = require('../models/storage');
-const Contact = require('../models/contact');
+let User = require('../models/user');
+let Storage = require('../models/storage');
+let Contact = require('../models/contact');
 
 module.exports = {
     contact,
