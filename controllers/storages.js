@@ -42,16 +42,16 @@ function index(req, res) {
             res.render('storages/edit', { title: 'Share My Storage', subtitle: 'Edit Storage Details',  storage });
         }
         res.redirect(`/storages/${storage.id}`)
-    })
+    });
 }
 
-  function create(req, res) {
-    const storage = new Storage(req.body);
-    storage.save(function(err) {
-      if (err) return res.render('storages/error', { title: 'Share My Storage', subtitle: 'Adding Storage Failed!'});
-      res.redirect('/storages');
-    })
-  }
+function create(req, res) {
+  const storage = new Storage(req.body);
+  storage.save(function(err) {
+    if (err) return res.render('storages/new', { title: 'Share My Storage', subtitle: 'Adding Storage Failed!'});
+    res.redirect('/storages');
+  })
+}
 
 function deleteStorage(req, res) {
   Storage.findByIdAndDelete(req.params.id, function (err, storage) {

@@ -12,8 +12,7 @@ module.exports = {
 function index(req, res) {
     Storage.find({}, function(err, storages) {
         User.find({}, function(err, users) {
-
         res.render('./admin/index', { title: 'Share My Storage Admin', subtitle: 'All Storages', storages, users });
       }).sort( { timestamp: 1 } );
-    }).sort( { name: 1 } );
+    }).sort( { timestamp: 1 } );
     }

@@ -2,18 +2,27 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
   
 
+
+const reviewSchema = new Schema({
+  content: String,
+  rating: {type: Number, min: 1, max: 5}
+}, {
+  timestamps: true
+});
+
+
 const storageSchema = new Schema({
   category: { 
       type: String,
-      enum: ['shared', 'private']
+      enum: ['Shared', 'Private']
   },
   storageType: { 
     type: String,
-    enum: ['covered', 'uncovered']
+    enum: ['Covered', 'Uncovered']
 },
   usageType: {
       type: String,
-      enum: ['all', 'limited']
+      enum: ['All', 'Limited']
   },
   location: String,
   mapLink: String,
@@ -21,7 +30,8 @@ const storageSchema = new Schema({
   price: Number,
   storageHeader: String,
   storageDetails: String,
-  userID: String
+  userID: String,
+  reviews: [reviewSchema]
 },
   
   {
