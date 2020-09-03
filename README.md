@@ -55,7 +55,7 @@ Admin Area Manage Storages Page
 
 Admin Area Manage Users Page
 
-![Share My Storage](https://i.imgur.com/KIKIbST.png)
+![Share My Storage](https://i.imgur.com/4qdm9J3.png)
 
 New Registered User First Login Page
 
