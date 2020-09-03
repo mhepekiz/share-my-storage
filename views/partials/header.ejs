@@ -68,7 +68,7 @@
                 <% if (user) { %> <p class="control">
                  <a href="/users/<%= user._id %>/edit"><button class="button is-success is-focused is-small"><span><i class="fas fa-edit"></i> <b>Edit My Account</b></span></button> </a> 
                   &nbsp;
-                   <a class="button is-focused is-small" href="/forms/<%=user.id%>/inbox"><span><i class="fas fa-envelope"></i> <b>Message Inbox</b></span></a> &nbsp;
+                   <a class="button is-focused is-small is-dark" href="/forms/<%=user.id%>/inbox"><span><i class="fas fa-envelope"></i> <b>Message Inbox</b></span></a> &nbsp;
                 <% if(user.phone) { %><a class="button is-info is-focused is-small" href="/storages/new"> <% } else { %><a class="button is-info is-focused is-small" disabled href="#"> <% } %><span><i class="fas fa-plus-square"></i> <b>Add Storage</b></span></a> &nbsp;
                      <a class="button is-warning is-focused is-small" href="/logout">
                     <span><i class="fas fa-sign-out-alt"></i> <b>Logout</b></span></a> &nbsp;

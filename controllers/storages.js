@@ -21,7 +21,7 @@
       // Main page list storages function with random results
 
           function index(req, res) {
-            Storage.aggregate([ { $sample: {size: 10} } ], function(err, storages) {
+            Storage.aggregate([ { $sample: {size: 3} } ], function(err, storages) {
                   res.render('storages/index', { title: 'Share My Storage', subtitle: 'Welcome', storages });
               });
             }

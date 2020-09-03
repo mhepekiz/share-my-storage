@@ -71,31 +71,31 @@
               <div class="field">
                 <label class="label">Google Maps Link</label>
                 <div class="control">
-                  <input class="input is-small" type="text" name="mapLink" autocomplete="off">
+                  <input class="input is-small" type="url" name="mapLink" autocomplete="off" required pattern="https://.*">
                 </div>
               </div>
               <div class="field">
               <label class="label">Photo Link</label>
               <div class="control">
-                <input class="input is-small" type="text" name="photoLink" autocomplete="off">
+                <input class="input is-small" type="url" name="photoLink" autocomplete="off" required pattern="https://.*">
               </div>
             </div>
             <div class="field">
               <label class="label">Monthly Price</label>
               <div class="control">
-                <input class="input is-small" type="text" name="price" autocomplete="off">
+                <input class="input is-small" type="number" name="price" autocomplete="off" required min="1" max="9999">
               </div>
             </div>
             <div class="field">
               <label class="label">Header</label>
               <div class="control">
-                <input class="input is-small" type="text" name="storageHeader" autocomplete="off">
+                <input class="input is-small" type="text" name="storageHeader" autocomplete="off" required>
               </div>
             </div>
             <div class="field">
               <label class="label">Details</label>
               <div class="control">
-                <textarea class="textarea" rows="10" name="storageDetails"></textarea>
+                <textarea class="textarea" rows="10" name="storageDetails" required></textarea>
               </div>
             </div>
             <input type="hidden" name="userID" value="<%=user.id%>"

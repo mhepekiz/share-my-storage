@@ -33,7 +33,7 @@
                       <div class="field">
                       <label class="label">Mobile Phone Number</label>
                       <div class="control">
-                        <input class="input is-small" type="text" name="phone" value="<%= user.phone %>" autocomplete="off">
+                        <input class="input is-small" type="tel" name="phone" value="<%= user.phone %>" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="off">
                       </div>
                     </div>
                     <div class="field">

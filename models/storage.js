@@ -27,7 +27,7 @@
             location: String,
             mapLink: String,
             photoLink: String,
-            price: Number,
+            price: String,
             storageHeader: String,
             storageDetails: String,
             userID: String,

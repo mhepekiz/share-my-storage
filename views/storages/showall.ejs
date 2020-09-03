@@ -23,7 +23,8 @@
                   <div class="card-content">
                     <div class="content">
                       <h5><%= st.storageHeader %></h5>
-                      <p><b><a href="/storages/<%= st.location %>/showbycity"><%= st.location %></a></b></p>
+                  <p  class="subtitle is-4"><b>$<%= st.price %></b></p>
+                  <p  class="subtitle is-6"><a href="/storages/<%= st.location %>/showbycity"><%= st.location %></a></p>
                       <a href="/storages/<%= st._id %>"><span class="button is-link is-danger is-focused">Show Details  &nbsp;
                         <% if( (user) && (user._id == st.userID) ){  %><i class="fas fa-star"></i> <% } %></span></a>
                     </div>

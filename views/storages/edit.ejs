@@ -76,31 +76,31 @@
                   <div class="field">
                     <label class="label">Google Maps Link</label>
                     <div class="control">
-                      <input class="input is-small" type="text" name="mapLink" value="<%=storage.mapLink%>" autocomplete="off">
+                      <input class="input is-small" type="text" name="mapLink" value="<%=storage.mapLink%>" autocomplete="off" required pattern="https://.*">
                     </div>
                   </div>
                   <div class="field">
                   <label class="label">Photo Link</label>
                   <div class="control">
-                    <input class="input is-small" type="text" name="photoLink" value="<%=storage.photoLink%>" autocomplete="off">
+                    <input class="input is-small" type="text" name="photoLink" value="<%=storage.photoLink%>" autocomplete="off" required pattern="https://.*">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Monthly Price</label>
                   <div class="control">
-                    <input class="input is-small" type="text" name="price"  value="<%=storage.price%>" autocomplete="off">
+                    <input class="input is-small" type="text" name="price"  value="<%=storage.price%>" autocomplete="off" required pattern="\d+(\.\d{2})?">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Header</label>
                   <div class="control">
-                    <input class="input is-small" type="text" name="storageHeader"  value="<%=storage.storageHeader%>" autocomplete="off">
+                    <input class="input is-small" type="text" name="storageHeader"  value="<%=storage.storageHeader%>" autocomplete="off" required>
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Details</label>
                   <div class="control">
-                    <textarea class="textarea" rows="10" name="storageDetails" ><%=storage.storageDetails%></textarea>
+                    <textarea class="textarea" rows="10" name="storageDetails" required ><%=storage.storageDetails%></textarea>
                   </div>
                 </div>
                 <input type="hidden" name="userID" value="<%=user._id%>"
