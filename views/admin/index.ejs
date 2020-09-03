@@ -1,85 +1,36 @@
 <%- include('./partials/header'); -%>
 
-<section class="hero is-dark">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          All Storages
-        </h1>
-        <h2 class="subtitle">
-          <%= user.name %>, you can manage <b>storages</b> & <b>users</b> here
-        </h2>
-      </div>
-    </div>
-  </section>
 
 
   <div class="table-container">
-    <table class="table is-fullwidth">
-        <table class="table is-fullwidth">
+    <table class="table is-narrow">
+      <tr><td align="center">
+        <table class="table is-narrow">
             <thead>
               <tr>
-                <th>Header</th>
-                <th>Location</th>
-                <th>Category</th>
-                <th>Storage Type</th>
-                <th>Usage Type</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Delete</th>
-               </tr>
+                <th><div class="notification ">
+                  <h2 class="title is-2 has-text-centered"><br>Have a nice day SEI Students and Instructors</h2><br>
+                </div></th>
+                <th><div class="notification is-info">
+                 <h3 class="title is-2 has-text-centered">TOTAL STORAGES<br><br><strong>9</strong></h3>
+                </div></th>
+                <th><div class="notification is-warning">
+                  <h3 class="title is-2 has-text-centered">TOTAL USERS<br><br><strong>5</strong></h3>
+                </div></th>
+                <th><div class="notification is-danger">
+                  <h3 class="title is-2 has-text-centered">TOTAL MESSAGES<br><br><strong>8</strong></h3>
+                </div></th>
+                </tr>
             </thead>
-            <tbody>
-            <% storages.forEach(function(st) {  %>
-              <tr>
-                <td><%= st.storageHeader %></td>
-                <td><%= st.location %></td>
-                <td><%= st.category %></td>
-                <td><%= st.storageType %></td>
-                <td><%= st.usageType %></td>
-                <td>$<%= st.price %></td>
-                <td><a href="/flights/<%= st._id %>"><button class="detailButton">DEACTIVATE</button></a></td>
-                <td><a href="/flights/<%= st._id %>"><button class="detailButton">DELETE</button></a></td>
-              </tr>
-              <% }) %>
-            </tbody>
-          </table>
-    </table>
+           </table>
+           </td>
+          </tr>
+      </table>
   </div>
 
 
 
 
-  <div class="table-container">
-    <table class="table is-fullwidth">
-        <table class="table is-fullwidth">
-            <thead>
-              <tr>
-                <th>Full Name</th>
-                <th>Email</th>
-                <th>Location</th>
-                <th>Phone</th>
-                <th>Role</th>
-                <th>Google ID</th>
-                <th>Delete</th>
-               </tr>
-            </thead>
-            <tbody>
-            <% users.forEach(function(us) {  %>
-              <tr>
-                <td><%= us.name %></td>
-                <td><%= us.email %></td>
-                <td><%= us.location %></td>
-                <td><%= us.phone %></td>
-                <td><%= us.userrole %></td>
-                <td><%= us.googleId %></td>
-                <td><a href="/flights/<%= us._id %>"><button class="detailButton">DELETE</button></a></td>
-              </tr>
-              <% }) %>
-            </tbody>
-          </table>
-    </table>
-  </div>
 
 
   

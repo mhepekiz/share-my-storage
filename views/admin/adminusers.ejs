@@ -1,0 +1,76 @@
+<%- include('./partials/header'); -%>
+
+
+
+
+  <div class="table-container">
+    <table class="table is-fullwidth">
+        <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Storage Type</th>
+                <th>Usage Type</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Delete</th>
+               </tr>
+            </thead>
+            <tbody>
+            <% storages.forEach(function(st) {  %>
+              <tr>
+                <td><%= st.storageHeader %></td>
+                <td><%= st.location %></td>
+                <td><%= st.category %></td>
+                <td><%= st.storageType %></td>
+                <td><%= st.usageType %></td>
+                <td>$<%= st.price %></td>
+                <td><a href="/flights/<%= st._id %>"><button class="detailButton">DEACTIVATE</button></a></td>
+                <td><a href="/flights/<%= st._id %>"><button class="detailButton">DELETE</button></a></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+    </table>
+  </div>
+
+
+
+
+  <div class="table-container">
+    <table class="table is-fullwidth">
+        <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Google ID</th>
+                <th>Delete</th>
+               </tr>
+            </thead>
+            <tbody>
+            <% users.forEach(function(us) {  %>
+              <tr>
+                <td><%= us.name %></td>
+                <td><%= us.email %></td>
+                <td><%= us.location %></td>
+                <td><%= us.phone %></td>
+                <td><%= us.userrole %></td>
+                <td><%= us.googleId %></td>
+                <td><a href="/flights/<%= us._id %>"><button class="detailButton">DELETE</button></a></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+    </table>
+  </div>
+
+
+  
+<%- include('./partials/footer'); -%>
+

@@ -2,6 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
   
 
+
+const answerSchema = new Schema({
+  content: String
+}, {
+  timestamps: true
+});
+
+
 const contactSchema = new Schema({
   messageType: { 
       type: String,
@@ -11,7 +19,8 @@ const contactSchema = new Schema({
   contactMessage: String,
   storageID: String,
   senderID: String,
-  ownerID: String
+  ownerID: String,
+  answers: [answerSchema]
 },
   
   {
