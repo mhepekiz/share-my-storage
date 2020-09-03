@@ -63,7 +63,7 @@ New Registered User First Login Page
 
 ### Technologies Used
 
-``
+
 <ul>
 <li>HTML</li>
 <li>CSS</li>
@@ -73,7 +73,6 @@ New Registered User First Login Page
 <li>MongoDB</li>
 <li>Mongoose</li>
 </ul>
-``
 
 
 ### You Can Reach By This Link
