@@ -2,90 +2,75 @@
 
 
 
-<% if (user) { %>
-
-<section class="hero is-danger">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Update User Info
-      </h1>
-    </div>
-  </div>
-</section>
-
-<div class="column is-2"></div>
-<div class="column is-8">
-
-
-    <form action="/users/<%= user._id %>?_method=PUT" method="POST">
-  
-        <div class="columns">
-          <div class="column is-one-third"></div>
-          <div class="column">
-        
-            <div class="field">
-              <label class="label">Full Name</label>
-              <div class="control">
-                <input class="input is-small" type="text" name="name" value="<%= user.name %>" disabled>
+          <% if (user) { %>
+          <section class="hero is-danger">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                  Update User Info
+                </h1>
               </div>
             </div>
-            <div class="field">
-                <label class="label">Email Address</label>
-                <div class="control">
-                  <input class="input is-small" type="text" name="email" value="<%= user.email %>" disabled>
-                </div>
-              </div>
-           
-            <div class="field">
-            <label class="label">Mobile Phone Number</label>
-            <div class="control">
-              <input class="input is-small" type="text" name="phone" value="<%= user.phone %>">
-            </div>
+          </section>
+          <div class="column is-2"></div>
+          <div class="column is-8">
+              <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+                  <div class="columns">
+                    <div class="column is-one-third"></div>
+                    <div class="column">
+                      <div class="field">
+                        <label class="label">Full Name</label>
+                        <div class="control">
+                          <input class="input is-small" type="text" name="name" value="<%= user.name %>" disabled>
+                        </div>
+                      </div>
+                      <div class="field">
+                          <label class="label">Email Address</label>
+                          <div class="control">
+                            <input class="input is-small" type="text" name="email" value="<%= user.email %>" disabled>
+                          </div>
+                        </div>
+                      <div class="field">
+                      <label class="label">Mobile Phone Number</label>
+                      <div class="control">
+                        <input class="input is-small" type="text" name="phone" value="<%= user.phone %>" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label">Location (City) :</label>
+                      <div class="select is-small is-fullwidth">
+                        <select name="location">
+                          <option selected value="<%= user.location %>"><%= user.location %></option>
+                          <option value="Houston">Houston</option>
+                          <option value="San Antonio">San Antonio</option>
+                          <option value="Dallas">Dallas</option>
+                          <option value="Austin">Austin</option>
+                          <option value="Forth Worth">Forth Worth</option>
+                          <option value="El Paso">El Paso</option>
+                          <option value="Arlington">Arlington</option>
+                          <option value="Corpus Christi">Corpus Christi</option>
+                          <option value="Plano">Plano</option>
+                          <option value="Laredo">Laredo</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label">Address</label>
+                      <div class="control">
+                        <input class="input is-small" type="text" name="address" value="<%= user.address %>" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                        <button class="button is-danger">Update My User Info</button>
+                      </div>
+                    </div>
+                  </form>
+                  </div>
           </div>
-        
-          <div class="field">
-            <label class="label">Location (City) :</label>
-            <div class="select is-small is-fullwidth">
-              <select name="location">
-                <option selected value="<%= user.location %>"><%= user.location %></option>
-                <option value="Houston">Houston</option>
-                <option value="San Antonio">San Antonio</option>
-                <option value="Dallas">Dallas</option>
-                <option value="Austin">Austin</option>
-                <option value="Forth Worth">Forth Worth</option>
-                <option value="El Paso">El Paso</option>
-                <option value="Arlington">Arlington</option>
-                <option value="Corpus Christi">Corpus Christi</option>
-                <option value="Plano">Plano</option>
-                <option value="Laredo">Laredo</option>
-              </select>
-            </div>
+          <div class="column is-2"></div>
           </div>
-        
-          <div class="field">
-            <label class="label">Address</label>
-            <div class="control">
-              <input class="input is-small" type="text" name="address" value="<%= user.address %>">
-            </div>
-          </div>
-        
-         
-          <div class="field">
-            <div class="control">
-              <button class="button is-danger">Update My User Info</button>
-            </div>
-          </div>
-        </form>
-        
-        </div>
-
-
-
-</div>
-<div class="column is-2"></div>
-</div>
-<% } %>
+          <% } %>
 
 
 

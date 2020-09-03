@@ -1,61 +1,52 @@
 <%- include('./partials/header'); -%>
 
   <%
-  
-  let userCount = Object.getOwnPropertyNames(users).length;
-  let storageCount = Object.getOwnPropertyNames(storages).length;
-  let contactCount = Object.getOwnPropertyNames(contacts).length;
+        // Count some data from collections
 
-                                    
+            let userCount = Object.getOwnPropertyNames(users).length;
+            let storageCount = Object.getOwnPropertyNames(storages).length;
+            let contactCount = Object.getOwnPropertyNames(contacts).length;
   %>
 
-  <div class="table-container">
-    <table class="table is-narrow">
-      <tr><td align="center">
-        <table class="table is-narrow">
-            <thead>
-              <tr>
-                <th><div class="notification ">
-                  <h2 class="title is-2 has-text-centered"><br>Have a nice day SEI Students and Instructors</h2><br>
-                </div></th>
-                <th><div class="notification is-info">
-                 <h3 class="title is-2 has-text-centered">TOTAL STORAGES<br><br><strong><%=storageCount-1%></strong></h3>
-                </div></th>
-                <th><div class="notification is-warning">
-                  <h3 class="title is-2 has-text-centered">TOTAL USERS<br><br><strong><%=userCount-1%></strong></h3>
-                </div></th>
-                <th><div class="notification is-danger">
-                  <h3 class="title is-2 has-text-centered">TOTAL MESSAGES<br><br><strong><%=contactCount-1%></strong></h3>
-                </div></th>
-                </tr>
-
+    <div class="table-container">
+      <table class="table is-narrow">
+        <tr><td align="center">
+          <table class="table is-narrow">
+              <thead>
                 <tr>
                   <th><div class="notification ">
-                    <h2 class="title is-2 has-text-centered"></h2><br>
+                    <h2 class="title is-1 has-text-centered"><br>Have a nice day SEI Students and Instructors</h2><br>
                   </div></th>
                   <th><div class="notification is-info">
-                   <h3 class="title is-2 has-text-centered">TOTAL REVIEWS<br><br><strong><%= %></strong></h3>
+                  <h3 class="title is-2 has-text-centered">STORAGES<br><br><strong><%=storageCount-1%></strong></h3>
                   </div></th>
                   <th><div class="notification is-warning">
-                    <h3 class="title is-2 has-text-centered">TOTAL USERS<br><br><strong><%=userCount-1%></strong></h3>
+                    <h3 class="title is-2 has-text-centered">USERS<br><br><strong><%=userCount-1%></strong></h3>
                   </div></th>
                   <th><div class="notification is-danger">
-                    <h3 class="title is-2 has-text-centered">TOTAL MESSAGES<br><br><strong><%=contactCount-1%></strong></h3>
+                    <h3 class="title is-2 has-text-centered">MESSAGES<br><br><strong><%=contactCount-1%></strong></h3>
                   </div></th>
                   </tr>
 
-
-            </thead>
-           </table>
-           </td>
-          </tr>
-      </table>
-  </div>
-
-
-
-
-
+                  <tr>
+                    <th><div>
+                      <h2 class="title is-1 has-text-centered"></h2><br>
+                    </div></th>
+                    <th><div>
+                    </div></th>
+                    <th><div class="notification is-success">
+                      <h3 class="title is-2 has-text-centered">REVIEWS<br><br><strong><%=userCount+10%></strong></h3>
+                    </div></th>
+                    <th><div class="notification is-dark">
+                      <h3 class="title is-2 has-text-centered">MESSAGES<br><br><strong><%=contactCount-1%></strong></h3>
+                    </div></th>
+                    </tr>
+                  </thead>
+            </table>
+            </td>
+            </tr>
+        </table>
+    </div>
 
   
 <%- include('./partials/footer'); -%>

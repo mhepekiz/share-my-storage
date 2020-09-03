@@ -7,6 +7,8 @@ module.exports = {
   create
 };
 
+// Create New Review by Storage ID
+
 function create(req, res) {
     Storage.findById(req.params.id, function(err, storage) {
     storage.reviews.push(req.body);
