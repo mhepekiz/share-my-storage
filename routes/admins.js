@@ -2,11 +2,11 @@ let router = require('express').Router();
 let passport = require('passport');
 let adminCtrl = require('../controllers/admins');
 
-router.get('/', adminCtrl.index);
-router.get('/adminstorages', adminCtrl.listStorages);
-router.get('/adminusers', adminCtrl.listUsers);
-router.delete('/:id', adminCtrl.deleteStorage);
-router.delete('/:id/user', adminCtrl.deleteUser);
+router.get('/', isLoggedIn, adminCtrl.index);
+router.get('/adminstorages', isLoggedIn, adminCtrl.listStorages);
+router.get('/adminusers', isLoggedIn, adminCtrl.listUsers);
+router.delete('/:id', isLoggedIn, adminCtrl.deleteStorage);
+router.delete('/:id/user', isLoggedIn, adminCtrl.deleteUser);
 
   
 
@@ -36,3 +36,10 @@ router.get('/auth/google', passport.authenticate(
 
   
 module.exports = router;
+
+
+function isLoggedIn(req, res, next) {
+  if ( req.isAuthenticated() ) return next();
+  res.redirect('/auth/google');
+}
+
