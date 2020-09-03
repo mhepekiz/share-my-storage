@@ -21,8 +21,7 @@ const contactRouter = require('./routes/forms');
 const adminRouter = require('./routes/admins');
 const reviewsRouter = require('./routes/reviews');
 
-require('./config/database');
-require('./config/passport');
+
 
 var app = express();
 
