@@ -12,6 +12,7 @@ require('dotenv').config();
 require('./config/database');
 require('./config/passport');
 
+// Share My Storage App Routers
 
 const indexRouter = require('./routes/index');
 const storageRouter = require('./routes/storages');
@@ -46,6 +47,9 @@ app.use(function(req, res, next){
   res.locals.user = req.user;
   next();
 })
+
+// Share My Storage App Use Definitions
+
 
 app.use('/', indexRouter);
 app.use('/storages', storageRouter);

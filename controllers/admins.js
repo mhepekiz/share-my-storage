@@ -1,20 +1,21 @@
-let User = require('../models/user');
-let Storage = require('../models/storage');
-let Contact = require('../models/contact');
+        // Define Models
+            let User = require('../models/user');
+            let Storage = require('../models/storage');
+            let Contact = require('../models/contact');
 
 
+        // Export Cb Functions
 
-module.exports = {
-  index,
-  listStorages,
-  listUsers,
-  deleteStorage,
-  deleteUser
-}
+            module.exports = {
+              index,
+              listStorages,
+              listUsers,
+              deleteStorage,
+              deleteUser
+            }
   
 
-
-          // Admin Main Screen Function
+        // Admin Main Screen Function
 
           function index(req, res) {
                   User.find({}, function(err, users) {
@@ -35,8 +36,7 @@ module.exports = {
               }
          
          // Show All Users to Admin Function
-         
-         
+               
               function listUsers(req, res) {
                 User.find({}, function(err, users) {
                   res.render('./admin/adminusers', { title: 'Share My Storage Admin', subtitle: 'All Users', users})
