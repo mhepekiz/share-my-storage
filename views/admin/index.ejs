@@ -1,6 +1,13 @@
 <%- include('./partials/header'); -%>
 
+  <%
+  
+  let userCount = Object.getOwnPropertyNames(users).length;
+  let storageCount = Object.getOwnPropertyNames(storages).length;
+  let contactCount = Object.getOwnPropertyNames(contacts).length;
 
+                                    
+  %>
 
   <div class="table-container">
     <table class="table is-narrow">
@@ -12,15 +19,32 @@
                   <h2 class="title is-2 has-text-centered"><br>Have a nice day SEI Students and Instructors</h2><br>
                 </div></th>
                 <th><div class="notification is-info">
-                 <h3 class="title is-2 has-text-centered">TOTAL STORAGES<br><br><strong>9</strong></h3>
+                 <h3 class="title is-2 has-text-centered">TOTAL STORAGES<br><br><strong><%=storageCount-1%></strong></h3>
                 </div></th>
                 <th><div class="notification is-warning">
-                  <h3 class="title is-2 has-text-centered">TOTAL USERS<br><br><strong>5</strong></h3>
+                  <h3 class="title is-2 has-text-centered">TOTAL USERS<br><br><strong><%=userCount-1%></strong></h3>
                 </div></th>
                 <th><div class="notification is-danger">
-                  <h3 class="title is-2 has-text-centered">TOTAL MESSAGES<br><br><strong>8</strong></h3>
+                  <h3 class="title is-2 has-text-centered">TOTAL MESSAGES<br><br><strong><%=contactCount-1%></strong></h3>
                 </div></th>
                 </tr>
+
+                <tr>
+                  <th><div class="notification ">
+                    <h2 class="title is-2 has-text-centered"></h2><br>
+                  </div></th>
+                  <th><div class="notification is-info">
+                   <h3 class="title is-2 has-text-centered">TOTAL REVIEWS<br><br><strong><%= %></strong></h3>
+                  </div></th>
+                  <th><div class="notification is-warning">
+                    <h3 class="title is-2 has-text-centered">TOTAL USERS<br><br><strong><%=userCount-1%></strong></h3>
+                  </div></th>
+                  <th><div class="notification is-danger">
+                    <h3 class="title is-2 has-text-centered">TOTAL MESSAGES<br><br><strong><%=contactCount-1%></strong></h3>
+                  </div></th>
+                  </tr>
+
+
             </thead>
            </table>
            </td>

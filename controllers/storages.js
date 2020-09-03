@@ -17,7 +17,7 @@ module.exports = {
   }
   
 function index(req, res) {
-  Storage.find({}, function(err, storages) {
+  Storage.aggregate([ { $sample: {size: 10} } ], function(err, storages) {
         res.render('storages/index', { title: 'Share My Storage', subtitle: 'Welcome', storages });
     });
   }
@@ -25,7 +25,7 @@ function index(req, res) {
   function listAll(req, res) {
     Storage.find({}, function(err, storages) {
           res.render('storages/showall', { title: 'Share My Storage', subtitle: 'Show All Storages', storages });
-      }).sort( { timestamp: 1 } );
+      }).sort( { createdAt: -1 } );
     }
 
 

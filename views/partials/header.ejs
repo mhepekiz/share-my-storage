@@ -39,6 +39,7 @@
                 CONTACT
                 </a>
             </div>
+           
             <% if( user ) { %>
             <div class = "navbar-brand">
              <div class="welcome">| &nbsp;Welcome, <b><%= user.name %></b></div>
@@ -52,6 +53,12 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
+                 <a class="bd-tw-button button is-focused is-small is-danger" href="/storages/all/showall"><span><i class="fas fa-th-list"></i> <b>SHOW ALL STORAGES</b></span>
+
+                </a>
+    
+              </p>
+                <p class="control">
                   <% if((user) && (user.userrole == "admin")){ %><a class="bd-tw-button button is-focused is-small is-warning" href="/admins">
                   <span>Admin Panel</span> <% } %>
                 </a>
@@ -59,23 +66,23 @@
               </p>
 
                 <p class="control">
-                    <% if (!user) { %><a class="bd-tw-button button is-focused is-small" href="/auth/google">
-                    <span>Connect with Google</span> <% } %>
+                    <% if (!user) { %><a class="bd-tw-button button is-focused is-small is-warning" href="/auth/google">
+                    <span><i class="fab fa-google"></i> Connect with Google</span> <% } %>
                   </a>
       
                 </p>
 
 
                 <% if (user) { %> <p class="control">
-                 <a href="/users/<%= user._id %>/edit"><button class="button is-primary is-focused is-small">Edit My Account</button> </a> 
+                 <a href="/users/<%= user._id %>/edit"><button class="button is-primary is-focused is-small"><span><i class="fas fa-edit"></i> Edit My Account</span></button> </a> 
                   &nbsp;
-                   <a class="button is-focused is-small" href="/forms/<%=user.id%>/inbox"><span>Message Inbox</span></a> &nbsp;
-                <% if(user.phone) { %><a class="button is-info is-focused is-small" href="/storages/new"> <% } else { %><a class="button is-info is-focused is-small" disabled href="#"> <% } %> Add Storage</a> &nbsp;
+                   <a class="button is-focused is-small" href="/forms/<%=user.id%>/inbox"><span><i class="fas fa-envelope"></i> Message Inbox</span></a> &nbsp;
+                <% if(user.phone) { %><a class="button is-info is-focused is-small" href="/storages/new"> <% } else { %><a class="button is-info is-focused is-small" disabled href="#"> <% } %><span><i class="fas fa-plus-square"></i> Add Storage</span></a> &nbsp;
                      <a class="button is-warning is-focused is-small" href="/logout">
-                    <span>Logout</span></a> &nbsp;
+                    <span><i class="fas fa-sign-out-alt"></i> Logout</span></a> &nbsp;
                     <% } else { %>
                         <a class="button is-danger is-focused is-small" href="/auth/google">
-                    <span>Sign Up</span></a>
+                    <span><i class="fas fa-user-plus"></i>Sign Up</span></a>
                     <% } %>
                   
                   </a>

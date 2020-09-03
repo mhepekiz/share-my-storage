@@ -27,16 +27,12 @@ module.exports = {
     function getInbox(req, res) {
       
       Contact.find({ "ownerID": req.params.user }, function(err, contact) {
-            res.render('forms/inbox', { title: 'Share My Storage', subtitle: 'Welcome', contact });
-        });
+        Storage.find({}, function(err, storages){ 
+            res.render('forms/inbox', { title: 'Share My Storage', subtitle: 'Welcome', contact, storages });
+        }).sort( { createdAt: -1 } );
+      })
       }
      
-    // function getInbox(req, res) {
-    //   Contact.findById (req.params.id,function(err, contact) {
-    //     console.log
-    //      res.render('forms/inbox', { title: 'Share My Storage', subtitle: 'Storage Details',  contact });
-    //    });
-    //   }
 
       function addAnswer(req, res) {
         Contact.findById(req.params.id, function(err, message) {

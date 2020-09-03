@@ -34,30 +34,7 @@
               <tr><td></td>
                  <td>
 
-
-                    <tbody><tr><td>
-
-                        <%
-                            console.log(contact.senderID);
-                            
-                            if (contact.answers.length) { %>
-                          <table>
-                            <tbody>
-                              <% contact.answers.forEach(function(a) { %>
-                                <tr>
-                                  <td><%= a.content %></td>
-                                 </tr>
-                              <% }); %>
-                             </tbody>
-                          </table>
-                        <% } else { %>
-                          <h5>Waiting For An Answer</h5>
-                        <% } %>
-
-
-
-                      </td></tr></tbody>
-
+                    <%= result %>
 
                  </td></tr>
 

@@ -14,12 +14,13 @@ module.exports = {
   
 
 function index(req, res) {
-  Storage.count({}, function (err, count) {
-    console.log(count);
-  });
-            User.find({}, function(err, users) {
-        res.render('./admin/index', { title: 'Share My Storage Admin', subtitle: 'All Storages',  users });
+        User.find({}, function(err, users) {
+          Storage.find({}, function(err, storages) {
+            Contact.find({}, function(err, contacts) {
+        res.render('./admin/index', { title: 'Share My Storage Admin', subtitle: 'All Storages',  users, storages, contacts });
       }).sort( { timestamp: 1 } );
+    });
+  });
     }
 
 
