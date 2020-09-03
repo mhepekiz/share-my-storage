@@ -21,7 +21,8 @@ const contactRouter = require('./routes/forms');
 const adminRouter = require('./routes/admins');
 const reviewsRouter = require('./routes/reviews');
 
-
+require('./config/database');
+require('./config/passport');
 
 var app = express();
 
@@ -31,12 +32,12 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({
-  secret: 'SEIRocks!',
+  secret: 'Storage Mates!',
   resave: false,
   saveUninitialized: true
 }));
