@@ -64,13 +64,15 @@ New Registered User First Login Page
 ### Technologies Used
 
 ``
-HTML
-CSS
-BULMA - CSS FRAMEWORK - https://www.bulma.io
-NODE.js
-Express.js
-MongoDB
-Mongoose
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>BULMA - CSS FRAMEWORK - <https://www.bulma.io></li>
+<li>NODE.js</li>
+<li>Express.js</li>
+<li>MongoDB</li>
+<li>Mongoose</li>
+</ul>
 ``
 
 
