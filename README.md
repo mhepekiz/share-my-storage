@@ -61,6 +61,35 @@ New Registered User First Login Page
 
 ![Share My Storage](https://i.imgur.com/QAQAsMD.png)
 
+### Technologies Used
+
+```HTML
+CSS
+BULMA - CSS FRAMEWORK - https://www.bulma.io
+NODE.js
+Express.js
+MongoDB
+Mongoose```
+
+
+### You Can Reach By This Link
+
+I'm not sure because I deployed to Heroku but not working :)
+Share My Storage App <https://share-my-storage.herokuapp.com/>
+
+My Trello Board <https://trello.com/b/oDw3FfEd/sei-project-ii-share-my-storage>
+
+### Next Steps
+
+<ul>
+<li>Show answers</li>
+<li>Google Maps API Integration</li>
+<li>Improved Admin Panel with edit functions</li>
+<li>Search Box</li>
+<li>New filtering options</li>
+<li>Payment Gateway</li>
+<li>Detailed analytics (Storage visits, visitor locations)</li>
+</ul>
 
 
 ### Share My Storage Wireframe
@@ -69,3 +98,4 @@ New Registered User First Login Page
 
 ### Share My Storage ERD
 ![ERD](https://i.imgur.com/1RB46Vb.png)
+
