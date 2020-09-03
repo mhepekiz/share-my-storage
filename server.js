@@ -18,7 +18,7 @@ const storageRouter = require('./routes/storages');
 const userRouter = require('./routes/users');
 const contactRouter = require('./routes/forms');
 const adminRouter = require('./routes/admins');
-// const reviewsRouter = require('./routes/reviews');
+const reviewsRouter = require('./routes/reviews');
 
 
 
@@ -52,7 +52,7 @@ app.use('/storages', storageRouter);
 app.use('/users', userRouter);
 app.use('/forms', contactRouter);
 app.use('/admins', adminRouter);
-// app.use('/', reviewsRouter);
+app.use('/', reviewsRouter);
 
 
 
