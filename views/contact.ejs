@@ -1,29 +1,78 @@
 <%- include('./partials/header'); -%>
 
+<section class="intro">
+
+<div class="hero-body">
+  <div class="container">
+    <h1 class="title">
+      Contact
+    </h1>
+    <h2 class="subtitle">
+      Do you need a <strong>Storage-Mate?</strong>
+    </h2>
+  </div>
+</div>
+
+<div class="container  is-fullheight">
 
 
+<div class="columns">
+  <div class="column">
+    <h5 class="subtitle is-5">
 
-<section class="section">
-    <div class="container">
-      <h1 class="title">
-          <a href="/">Contact Routing</a></h1>
-          <p class="subtitle">
-            <strong>We'll see</strong> at the end of Week#6!
-          </p>
+
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" required>
         </div>
-      </section>
-  
+      </div>   
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email input" value="hello@">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
 
+      </div>
       
+      <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Membership</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea"></textarea>
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+      </div>
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/jtCF90Y.jpg">
+  </div>
+</div>
 
-<% if (user) { %>
 
-    <h1>Logged In Perfectly!</h1>
+</div>
 
+</section>
 
-<% } %>
-
-
+</section>
 <%- include('./partials/footer'); -%>
 
 

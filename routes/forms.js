@@ -8,6 +8,8 @@ router.post('/', isLoggedIn, contactCtrl.sendMessage);
 router.get('/:user/inbox', isLoggedIn, contactCtrl.getInbox);
 router.post('/:id/answers', isLoggedIn, contactCtrl.addAnswer);
 
+
+
 module.exports = router;
 
 

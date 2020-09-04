@@ -1,5 +1,6 @@
 <%- include('../partials/header.ejs') -%>
 
+<section class="intro">  
 
 
           <% if (user) { %>
@@ -71,13 +72,13 @@
               <div class="field">
                 <label class="label">Google Maps Link</label>
                 <div class="control">
-                  <input class="input is-small" type="url" name="mapLink" autocomplete="off" required pattern="https://.*" placeholder="https://.*"">
+                  <input class="input is-small" type="url" name="mapLink" autocomplete="off" required pattern="https://.*" placeholder="https://.*">
                 </div>
               </div>
               <div class="field">
               <label class="label">Photo Link</label>
               <div class="control">
-                <input class="input is-small" type="url" name="photoLink" autocomplete="off" required pattern="https://.*" placeholder="https://.*"">
+                <input class="input is-small" type="url" name="photoLink" autocomplete="off" required pattern="https://.*" placeholder="https://.*">
               </div>
             </div>
             <div class="field">
@@ -111,7 +112,7 @@
           </div>
           <% } %>
 
-
+</section>
 
 <%- include('../partials/footer.ejs') -%>
 

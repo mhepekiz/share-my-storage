@@ -10,6 +10,16 @@ a {
   color: #00B7FF;
 }
 
+section.intro {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #efefef;
+  height: 100vh;
+  
+}
 
 
 

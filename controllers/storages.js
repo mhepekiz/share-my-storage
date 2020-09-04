@@ -38,7 +38,6 @@
 
               function listByCity(req, res) {
                 Storage.find({ "location": req.params.location }, function(err, storages) {
-                  console.log(req);
                       res.render('storages/showall', { title: 'Share My Storage', subtitle: 'Show All Storages by City', storages });
                   });
                 }

@@ -6,7 +6,7 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
-
+var nodemailer = require('nodemailer')
 
 require('dotenv').config();
 require('./config/database');
@@ -57,7 +57,6 @@ app.use('/users', userRouter);
 app.use('/forms', contactRouter);
 app.use('/admins', adminRouter);
 app.use('/', reviewsRouter);
-
 
 
 // catch 404 and forward to error handler
