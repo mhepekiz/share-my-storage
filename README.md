@@ -77,10 +77,9 @@ New Registered User First Login Page
 
 ### You Can Reach By This Link
 
-I'm not sure because I deployed to Heroku but not working :)
 Share My Storage App <https://share-my-storage.herokuapp.com/>
 
-My Trello Board <https://trello.com/b/oDw3FfEd/sei-project-ii-share-my-storage>
+App's Trello Board <https://trello.com/b/oDw3FfEd/sei-project-ii-share-my-storage>
 
 ### Next Steps
 
