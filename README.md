@@ -77,7 +77,7 @@ New Registered User First Login Page
 
 ### You Can Reach By This Link
 
-Share My Storage App <https://sharemystorage.hepekiz.com/>
+Share My Storage App <http://share-my-storage.herokuapp.com/>
 
 App's Trello Board <https://trello.com/b/oDw3FfEd/sei-project-ii-share-my-storage>
 
